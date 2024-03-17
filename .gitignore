@@ -1,0 +1,4 @@
+samples/*.IMG
+samples/*.LBL
+samples/*.xml
+__pycache__
