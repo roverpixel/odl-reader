@@ -17,8 +17,10 @@ def odl_type_to_numpy_dtype( sample_type, sample_bits ):
       'IEEE_DOUBLE':          '>f',
   }
 
-  dtype = sample_type_map.get( sample_type )
-  return f'{dtype}{sample_bits//8}'
+  dtype_prefix = sample_type_map.get( sample_type )
+  if dtype_prefix is None:
+    raise ValueError(f"Unknown PDS sample type: {sample_type}")
+  return f'{dtype_prefix}{sample_bits//8}'
 
 
 
