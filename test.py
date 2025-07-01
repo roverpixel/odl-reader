@@ -21,7 +21,7 @@ def main():
 
     # Parse the LBL file
     print(f"Parsing {SAMPLE_LBL_FILE}...")
-    with open(SAMPLE_LBL_FILE, 'r') as infile:
+    with open(SAMPLE_LBL_FILE, 'r', encoding='latin-1') as infile:
         label_data = label_parser.parse(infile)
 
     if not label_data:

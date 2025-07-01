@@ -18,7 +18,7 @@ class TestODLParser(unittest.TestCase):
     def setUpClass(cls):
         """Parse the sample LBL file once for all tests in this class."""
         cls.label_parser = odl.ODL()
-        with open(SAMPLE_LBL_FILE, 'r') as f:
+        with open(SAMPLE_LBL_FILE, 'r', encoding='latin-1') as f:
             cls.parsed_label_data = cls.label_parser.parse(f)
 
         # cls.img_label_parser = odl.ODL()
@@ -141,7 +141,7 @@ class TestODLParser(unittest.TestCase):
                         f"Sample IMG file with embedded label missing: {SAMPLE_IMG_WITH_EMBEDDED_LABEL}")
 
         parser = odl.ODL()
-        with open(SAMPLE_IMG_WITH_EMBEDDED_LABEL, 'r') as f_img:
+        with open(SAMPLE_IMG_WITH_EMBEDDED_LABEL, 'r', encoding='latin-1') as f_img:
             # The ODL parser's try-except for UnicodeDecodeError should handle the binary part
             parsed_data = parser.parse(f_img)
 
