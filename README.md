@@ -1,3 +1,4 @@
+[![Python package](https://github.com/roverpixel/odl-reader/actions/workflows/python-package.yml/badge.svg)](https://github.com/roverpixel/odl-reader/actions/workflows/python-package.yml)
 # ODL Reader
 
 This is a Python parser to read Object Description Language labels from NASA PDS3 archives.
